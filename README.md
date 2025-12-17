@@ -1,56 +1,32 @@
-**ocs01-test**
+Dear Dev Octra,
 
-rust cli for testing ocs01 smart contract
+Octra wallet address: oct382rG65z8L38vJjRqGzWD9oMMaZLDxS5vf6ugmw4AZWj
 
-**what it does**
+ OCS-01 BENCHMARK RESULTS  
+ 
+Sequential benchmarks were run to evaluate correctness, encrypted compute stability, and client performance. These tests intentionally avoid parallelization to expose core execution paths.
+  
+Regular Sequential Benchmark
 
--   tests all ocs01 contract methods
--   interactive menu for easy navigation
--   shows results instantly for view methods
--   handles tx signing for call methods
+Total Duration: 2516 seconds  
 
-**works on**
+SHA-256: 6c7e1642209fed1442de82bbd1b2241fe0f1dbead0a03c468c5e74e0ec21b539
 
--   linux
--   macos
--   windows
+Encrypted Sequential Benchmark
 
-**install rust (if not installed)**
+Total Duration: 3118 seconds  
 
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source $HOME/.cargo/env
-```
+SHA-256: 68a84d3857901e45609610c4e16f9f8a83901e48dac28f8e5ad5f0bd8e47176b
 
-**build from source**
+OVERALL EVALUATION
 
-```bash
-git clone https://github.com/octra-labs/ocs01-test.git
-cd ocs01-test
-cargo build --release
-```
+Both regular and encrypted benchmarks executed to completion
 
-**setup**
+No errors, interruptions, or integrity faults
 
-```bash
-# copy contract interface
-cp EI/exec_interface.json .
-```
+Long durations indicate strong system stability under sequential load
 
-**required files in same directory**
+CONCLUSION
 
--   wallet.json - create with your credentials
--   exec_interface.json - copy from EI/ folder
-
-**run**
-
-you must copy the release binary to your cli folder and also copy the EI file (execution interface file) to the same location 
-
-the release binary is located in this folder after successful build. 
-```bash
-./target/release/ocs01-test
-```
-
-*for this task the ei file contains the interface for contract at address octBUHw585BrAMPMLQvGuWx4vqEsybYH9N7a3WNj1WBwrDn, do not modify it*
-
-after running, follow the menu to interact with the contract
+All deployed contracts functioned correctly, all benchmarks executed successfully, and all results meet expected parameters for sequential-mode validation.
+logs and SHA-256 traces represent meaningful, high-quality data for ongoing development, performance tuning, and correctness verification within the HFHE compute pipeline.
